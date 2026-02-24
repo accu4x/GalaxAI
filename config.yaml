@@ -1,0 +1,19 @@
+# GalaxAI scaffold config
+
+game_api:
+  base_url: "http://localhost:5000"
+  auth_header: "X-GALAXAI-KEY"
+
+azure:
+  blob_storage:
+    container: "lore"
+    base_url: "https://<your-storage>.blob.core.windows.net/lore/"
+
+web:
+  pwa:
+    title: "GalaxAI"
+    theme: "dark-sci-fi"
+
+nanobot:
+  telegram_token_env: "TELEGRAM_TOKEN"
+  default_post_id: ""

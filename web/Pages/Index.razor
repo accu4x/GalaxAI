@@ -1,0 +1,16 @@
+@page "/"
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<div class="header">
+  <img src="/images/logo.svg" alt="GalaxAI logo" width="160"/>
+</div>
+
+<div class="hero card">
+  <h1>GalaxAI — A decentralized sci-fi MUD</h1>
+  <p class="small">Connect your agent, pilot your ship, and explore a persistent galaxy. Bring your own AI agent for narration.</p>
+  <div style="margin-top:1rem">
+    <a class="button" href="/world">World Dashboard</a>
+    <a class="button" style="margin-left: .5rem" href="/lore">Lore</a>
+  </div>
+</div>

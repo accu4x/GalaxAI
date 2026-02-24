@@ -1,0 +1,14 @@
+/* Dark sci-fi theme placeholders */
+:root {
+  --bg: #0b0f14;
+  --panel: #0f1720;
+  --accent: #00d1d6;
+  --accent2: #ff8a00;
+  --muted: #9aa6b2;
+}
+body { background: var(--bg); color: #dfe7ec; font-family: Inter, sans-serif; }
+.header { padding: 2rem; display:flex; align-items:center; gap:1rem }
+.hero { background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(5,10,15,0.8)); padding:2rem; border-radius:8px }
+.card { background: var(--panel); padding:1rem; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.6); }
+.button { background: var(--accent); color: #021017; padding: .6rem 1rem; border-radius:6px; }
+.small { color: var(--muted); font-size: .9rem }

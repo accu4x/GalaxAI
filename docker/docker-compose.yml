@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  gameapi:
+    build: ../src/GameApi
+    ports:
+      - "5000:80"
+  nanobot:
+    build: ../../python/nanobot_skill
+    environment:
+      - TELEGRAM_TOKEN
+      - GALAXAI_API_URL=http://host.docker.internal:5000
