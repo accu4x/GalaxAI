@@ -1,0 +1,6 @@
+# Placeholder Dockerfile for GalaxAI Game API
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+WORKDIR /app
+COPY . /app
+EXPOSE 80
+ENTRYPOINT ["dotnet", "GalaxAI.Game.Api.dll"]

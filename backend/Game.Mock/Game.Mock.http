@@ -1,0 +1,6 @@
+@Game.Mock_HostAddress = http://localhost:5025
+
+GET {{Game.Mock_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

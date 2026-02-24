@@ -1,0 +1,45 @@
+openapi: 3.0.1
+info:
+  title: GalaxAI Game API
+  version: 0.1.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /player/{player_id}/state:
+    get:
+      summary: Get player state
+      parameters:
+        - name: player_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Player state
+  /action:
+    post:
+      summary: Perform an action
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Action result
+  /world/summary:
+    get:
+      summary: World summary
+      responses:
+        '200':
+          description: World summary
+  /auth/keys:
+    post:
+      summary: Create API key
+    get:
+      summary: List keys
+  /auth/keys/rotate:
+    post:
+      summary: Rotate keys
