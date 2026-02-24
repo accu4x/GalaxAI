@@ -57,4 +57,18 @@ public class SessionController : ControllerBase
         var (formatted, raw) = _runner.SendMessage(req.SessionId, req.Message, snapshot);
         return Ok(new { reply = formatted, raw = raw });
     }
+
+    [HttpPost("reload")]
+    public IActionResult Reload()
+    {
+        try
+        {
+            _runner.ReloadData();
+            return Ok(new { reloaded = true });
+        }
+        catch (System.Exception ex)
+        {
+            return StatusCode(500, new { reloaded = false, error = ex.Message });
+        }
+    }
 }

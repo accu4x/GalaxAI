@@ -1,0 +1,20 @@
+{
+  "items": [
+    { "id": "ore_c_organics", "name": "Organics (Raw)", "category": "Raw", "subtype": "organics", "stackable": true, "mass": 0.5, "volume": 0.1, "baseValue": 12 },
+    { "id": "ore_c_waterice", "name": "Water Ice", "category": "Raw", "subtype": "ice", "stackable": true, "mass": 1.0, "volume": 0.2, "baseValue": 8 },
+    { "id": "ore_s_silicate", "name": "Silicate Ore", "category": "Raw", "subtype": "silicate", "stackable": true, "mass": 1.0, "volume": 0.2, "baseValue": 15 },
+    { "id": "ore_s_nickeliron", "name": "Nickel-Iron Ore", "category": "Raw", "subtype": "metal_ore", "stackable": true, "mass": 1.2, "volume": 0.25, "baseValue": 30 },
+    { "id": "ore_m_iron", "name": "Iron Ore", "category": "Raw", "subtype": "metal_ore", "stackable": true, "mass": 2.0, "volume": 0.4, "baseValue": 40 },
+    { "id": "ore_m_pgm_nugget", "name": "PGM Nugget", "category": "Raw", "subtype": "precious", "stackable": false, "mass": 0.05, "volume": 0.01, "baseValue": 200 },
+
+    { "id": "refined_iron_ingot", "name": "Iron Ingot", "category": "Refined", "subtype": "ingot", "stackable": true, "mass": 1.8, "volume": 0.3, "baseValue": 120 },
+    { "id": "refined_fuel", "name": "Processed Fuel", "category": "Refined", "subtype": "fuel", "stackable": true, "mass": 0.8, "volume": 0.2, "baseValue": 60 },
+
+    { "id": "module_basic_miner", "name": "Basic Miner Module", "category": "Module", "subtype": "miner", "stackable": false, "mass": 50, "volume": 10, "baseValue": 800, "module": { "minYield": 1, "maxYield": 3, "efficiency": 0.8, "energyCost": 5 } },
+    { "id": "module_laser_miner", "name": "Laser Miner Module", "category": "Module", "subtype": "miner", "stackable": false, "mass": 120, "volume": 25, "baseValue": 2800, "module": { "minYield": 2, "maxYield": 6, "efficiency": 1.0, "energyCost": 15 } },
+    { "id": "module_extractor_rig", "name": "Extractor Rig", "category": "Module", "subtype": "industrial", "stackable": false, "mass": 2000, "volume": 150, "baseValue": 25000, "module": { "minYield": 10, "maxYield": 60, "efficiency": 1.6, "energyCost": 200, "deployTime": 86400 } },
+
+    { "id": "relic_archon_fragment", "name": "Archon Relic Fragment", "category": "Relic", "subtype": "archon", "stackable": false, "mass": 0.5, "volume": 0.2, "baseValue": 5000, "rarity": "unique" },
+    { "id": "bp_archon_drive", "name": "Blueprint: Archon Drive (partial)", "category": "Blueprint", "subtype": "tech", "stackable": false, "mass": 0.1, "volume": 0.01, "baseValue": 12000 }
+  ]
+}

@@ -32,10 +32,35 @@ namespace Game.NpcSkill.Dialog
     {
         private readonly string _dataPath;
         private readonly ConcurrentDictionary<string, DialogSession> _sessions = new();
+        private string _agentGuidelines = string.Empty;
+        private string _lore = string.Empty;
 
         public DialogRunner(string dataPath)
         {
             _dataPath = dataPath ?? throw new ArgumentNullException(nameof(dataPath));
+            LoadAuxFiles();
+        }
+
+        private void LoadAuxFiles()
+        {
+            try
+            {
+                var baseDir = Path.GetDirectoryName(_dataPath) ?? _dataPath;
+                var guidPath = Path.Combine(baseDir, "Data", "AgentGuidelines.md");
+                var lorePath = Path.Combine(baseDir, "Data", "Lore.md");
+                if (File.Exists(guidPath)) _agentGuidelines = File.ReadAllText(guidPath);
+                if (File.Exists(lorePath)) _lore = File.ReadAllText(lorePath);
+            }
+            catch
+            {
+                // swallow errors for robustness in demos
+            }
+        }
+
+        public void ReloadData()
+        {
+            LoadAuxFiles();
+            // future: reload NPC cache if implemented
         }
 
         public IReadOnlyList<string> ListNpcs()
@@ -135,6 +160,9 @@ namespace Game.NpcSkill.Dialog
                 opening = $"{parsed.name} greets you.";
             }
 
+            // include agent guidelines and lore in the rendering context (not yet a language model prompt)
+            var context = _agentGuidelines + "\n\n" + _lore;
+
             var body = SubstitutePlaceholders(opening, snapshot);
             var formatted = RenderScreen(parsed.name, parsed.screen, body);
 
@@ -162,6 +190,9 @@ namespace Game.NpcSkill.Dialog
 
             // simple variation based on playerMessage
             reply = reply + "\n\n" + "(responding to: " + Truncate(playerMessage, 200) + ")";
+
+            // include guidelines (future: use for LLM prompt)
+            var context = _agentGuidelines + "\n\n" + _lore;
 
             var body = SubstitutePlaceholders(reply, snapshot);
             var formatted = RenderScreen(parsed.name, parsed.screen, body);

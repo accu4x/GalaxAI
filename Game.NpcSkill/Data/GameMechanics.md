@@ -81,7 +81,62 @@ Description: Quick simulated combat flow used for demos.
 - Technical limitations as fiction: use client limitations as narrative mechanics. For example, new missions or storylines may only be available at specific locations (e.g., read the newsfeed at a station to unlock missions).
 - Progressive discovery: when exploring a new star system the server generates a lightweight "system shell". As players explore, the system fleshs out with locations, NPCs, and events. When exploration data is uploaded, other players can discover and visit those sites, allowing the world to evolve collaboratively.
 
+## Mining & Asteroid Mechanics
+
+Overview: Mining is an active gameplay loop where players travel to asteroid belts and extract raw materials. Asteroids are categorized by composition (C-type, S-type, M-type). Each asteroid has a limited resource pool and yields materials according to its composition and the player's mining setup.
+
+Canonical actions and events:
+- MINE_ASTEROID(asteroidId, moduleId)
+- DEPLOY_EXTRACTOR(asteroidFieldId, extractorModuleId)
+- REFINE_MATERIALS(facilityId, recipeId)
+- SEARCH_RELIC(locationId)
+- RESEARCH_RELIC(relicId, facilityId)
+
+Preconditions & Effects:
+- MINE_ASTEROID
+  - Preconditions: player.ship at asteroid location; required mining module installed and functional; cargo capacity available
+  - Effects: consume capacitor/fuel, reduce asteroid.pool by yieldUnits, add items to ship.cargo or player.inventory, chance to trigger encounters (pirates, Purge drones)
+  - Events: ASTEROID_MINED(result)
+
+- DEPLOY_EXTRACTOR
+  - Preconditions: large industrial ship or specialized module; requires time to deploy
+  - Effects: reserves portion of asteroid pool for extractor; yields large batch harvests over time
+  - Events: EXTRACTOR_DEPLOYED, EXTRACTOR_DEPLETED
+
+- REFINE_MATERIALS
+  - Preconditions: docked at refinery or have onboard refinery module; requires recipe and input items
+  - Effects: consumes inputs, time & energy; produces refined outputs and possibly byproducts
+  - Events: REFINERY_COMPLETED
+
+Relic Hunting & Research
+- SEARCH_RELIC
+  - Description: Rare relics from the Archons can be found on planets, moons, and deep-space ruins. Searching is an action that consumes time and may require specialized scanners or relic-hunting modules.
+  - Preconditions: at location with relic potential (ruins, ruins-sites, Arks)
+  - Effects: small chance to find a relic item; finding increases local lore data and can trigger faction interest or Purge detection
+  - Events: RELIC_FOUND(relicId)
+
+- RESEARCH_RELIC
+  - Description: Researching a recovered relic at a lab/refinery can unlock blueprints, new module designs, or story knowledge. Research consumes rare materials, time, and specialist facilities.
+  - Preconditions: have relic item, access to research facility
+  - Effects: yields blueprint items, research logs, and may adjust faction reputation or trigger hidden story branches
+  - Events: RELIC_RESEARCHED(result)
+
+## Items & Data
+- Items catalog (JSON): Game.NpcSkill/Data/Items/items.json — includes ore types, refined goods, modules, relics and blueprints
+- Mining modules are defined in the items catalog as module-type entries with min/max yields, efficiency multipliers, and energy costs
+
+## Pricing & Markets
+- Mining outputs feed system markets. The market tick algorithm uses daily randomness + player-supplied supply/demand deltas. Repeated shipments to a planet increase local supply and depress prices.
+- Suggested API endpoints:
+  - GET /market/{systemId}/snapshot
+  - POST /market/{systemId}/trade { playerId, itemId, qty, buy/sell }
+  - GET /player/{playerId}/inventory
+
 ## Notes for Designers
-- Add new actions as simple verbs with Preconditions, Effects, UI, and Events.
-- Keep actions idempotent and clearly document required state fields.
-- The DialogRunner will consult these rules to decide when to map free-text player intents to game actions.
+- Make extraction deterministic enough to be fun but stochastic enough to support emergent stories and scarcity.
+- Use extractor deployment for large-scale industrial play; make it require commitments (time, vulnerability) so it isn't trivially exploitable.
+- Relic hunting should be rare and significant — discovering a relic should feel like an event and may yield long-term narrative consequences.
+
+## Notes for Implementation
+- All API payloads and state snapshots use JSON. Agents should treat the API as authoritative and only present the screen payloads returned by the server.
+- Design mining tests and mock data to exercise the ASTEROID_MINED and RELIC_FOUND events during development.
