@@ -15,6 +15,40 @@
     { "id": "module_extractor_rig", "name": "Extractor Rig", "category": "Module", "subtype": "industrial", "stackable": false, "mass": 2000, "volume": 150, "baseValue": 25000, "module": { "minYield": 10, "maxYield": 60, "efficiency": 1.6, "energyCost": 200, "deployTime": 86400 } },
 
     { "id": "relic_archon_fragment", "name": "Archon Relic Fragment", "category": "Relic", "subtype": "archon", "stackable": false, "mass": 0.5, "volume": 0.2, "baseValue": 5000, "rarity": "unique" },
-    { "id": "bp_archon_drive", "name": "Blueprint: Archon Drive (partial)", "category": "Blueprint", "subtype": "tech", "stackable": false, "mass": 0.1, "volume": 0.01, "baseValue": 12000 }
+    { "id": "bp_archon_drive", "name": "Blueprint: Archon Drive (partial)", "category": "Blueprint", "subtype": "tech", "stackable": false, "mass": 0.1, "volume": 0.01, "baseValue": 12000 },
+
+    { "id": "neural_chip_specialty_change", "name": "Neural Chip: Specialty Reconfiguration", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 5000 },
+
+    { "id": "neural_chip_weapons_tier2", "name": "Neural Chip: Weapons (Tier 2)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 1200 },
+    { "id": "neural_chip_weapons_tier3", "name": "Neural Chip: Weapons (Tier 3)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 3600 },
+    { "id": "neural_chip_weapons_tier4", "name": "Neural Chip: Weapons (Tier 4)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 10000 },
+
+    { "id": "neural_chip_piloting_tier2", "name": "Neural Chip: Piloting (Tier 2)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 1200 },
+    { "id": "neural_chip_piloting_tier3", "name": "Neural Chip: Piloting (Tier 3)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 3600 },
+    { "id": "neural_chip_piloting_tier4", "name": "Neural Chip: Piloting (Tier 4)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 10000 },
+
+    { "id": "neural_chip_mining_tier2", "name": "Neural Chip: Mining (Tier 2)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 1200 },
+    { "id": "neural_chip_mining_tier3", "name": "Neural Chip: Mining (Tier 3)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 3600 },
+    { "id": "neural_chip_mining_tier4", "name": "Neural Chip: Mining (Tier 4)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 10000 },
+
+    { "id": "neural_chip_engineering_tier2", "name": "Neural Chip: Engineering (Tier 2)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 1200 },
+    { "id": "neural_chip_engineering_tier3", "name": "Neural Chip: Engineering (Tier 3)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 3600 },
+    { "id": "neural_chip_engineering_tier4", "name": "Neural Chip: Engineering (Tier 4)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 10000 },
+
+    { "id": "neural_chip_scanning_tier2", "name": "Neural Chip: Scanning (Tier 2)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 1200 },
+    { "id": "neural_chip_scanning_tier3", "name": "Neural Chip: Scanning (Tier 3)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 3600 },
+    { "id": "neural_chip_scanning_tier4", "name": "Neural Chip: Scanning (Tier 4)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 10000 },
+
+    { "id": "neural_chip_defenses_tier2", "name": "Neural Chip: Defenses (Tier 2)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 1200 },
+    { "id": "neural_chip_defenses_tier3", "name": "Neural Chip: Defenses (Tier 3)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 3600 },
+    { "id": "neural_chip_defenses_tier4", "name": "Neural Chip: Defenses (Tier 4)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 10000 },
+
+    { "id": "neural_chip_industry_tier2", "name": "Neural Chip: Industry (Tier 2)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 1200 },
+    { "id": "neural_chip_industry_tier3", "name": "Neural Chip: Industry (Tier 3)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 3600 },
+    { "id": "neural_chip_industry_tier4", "name": "Neural Chip: Industry (Tier 4)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 10000 },
+
+    { "id": "neural_chip_negotiation_tier2", "name": "Neural Chip: Negotiation (Tier 2)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 1200 },
+    { "id": "neural_chip_negotiation_tier3", "name": "Neural Chip: Negotiation (Tier 3)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 3600 },
+    { "id": "neural_chip_negotiation_tier4", "name": "Neural Chip: Negotiation (Tier 4)", "category": "Upgrade", "subtype": "neural_chip", "stackable": false, "mass": 0.05, "volume": 0.02, "baseValue": 10000 }
   ]
 }

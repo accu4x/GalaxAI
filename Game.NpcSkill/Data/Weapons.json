@@ -1,0 +1,50 @@
+[
+  {
+    "id": "beam_micron_laser",
+    "name": "Micron Laser",
+    "type": "Beam",
+    "tier": 1,
+    "baseAccuracy": 0.8,
+    "baseDamage": 18,
+    "ammoType": null,
+    "ammoPerShot": 0,
+    "energyCost": 6,
+    "threatOnUse": 1
+  },
+  {
+    "id": "kin_railgun_mk1",
+    "name": "Railgun Mk I",
+    "type": "Kinetic",
+    "tier": 1,
+    "baseAccuracy": 0.7,
+    "baseDamage": 24,
+    "ammoType": "kinetic_round",
+    "ammoPerShot": 1,
+    "energyCost": 2,
+    "threatOnUse": 1
+  },
+  {
+    "id": "missile_light",
+    "name": "Light Missile Launcher",
+    "type": "Missile",
+    "tier": 1,
+    "baseAccuracy": 0.65,
+    "baseDamage": 30,
+    "ammoType": "missile_light",
+    "ammoPerShot": 1,
+    "energyCost": 0,
+    "threatOnUse": 2
+  },
+  {
+    "id": "pulse_short_burst",
+    "name": "Pulse Short Burst",
+    "type": "Pulse",
+    "tier": 1,
+    "baseAccuracy": 0.75,
+    "baseDamage": 16,
+    "ammoType": null,
+    "ammoPerShot": 0,
+    "energyCost": 10,
+    "threatOnUse": 1
+  }
+]

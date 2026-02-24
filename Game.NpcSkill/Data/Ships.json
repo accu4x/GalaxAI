@@ -1,0 +1,62 @@
+[
+  {
+    "id": "shuttle_mk1",
+    "name": "Shuttle Mk I",
+    "class": "Shuttle",
+    "tier": 1,
+    "shieldsMax": 80,
+    "armorMax": 60,
+    "capacitorMax": 40,
+    "baseEvasion": 0.12,
+    "moduleSlots": 2,
+    "cargoCapacity": { "mass": 200, "volume": 50 }
+  },
+  {
+    "id": "frigate_mk1",
+    "name": "Frigate Mk I",
+    "class": "Frigate",
+    "tier": 2,
+    "shieldsMax": 90,
+    "armorMax": 80,
+    "capacitorMax": 60,
+    "baseEvasion": 0.18,
+    "moduleSlots": 4,
+    "cargoCapacity": { "mass": 300, "volume": 80 }
+  },
+  {
+    "id": "destroyer_mk1",
+    "name": "Destroyer Mk I",
+    "class": "Destroyer",
+    "tier": 3,
+    "shieldsMax": 110,
+    "armorMax": 120,
+    "capacitorMax": 70,
+    "baseEvasion": 0.08,
+    "moduleSlots": 5,
+    "cargoCapacity": { "mass": 400, "volume": 100 }
+  },
+  {
+    "id": "cruiser_mk1",
+    "name": "Cruiser Mk I",
+    "class": "Cruiser",
+    "tier": 4,
+    "shieldsMax": 160,
+    "armorMax": 240,
+    "capacitorMax": 120,
+    "baseEvasion": 0.04,
+    "moduleSlots": 8,
+    "cargoCapacity": { "mass": 800, "volume": 300 }
+  },
+  {
+    "id": "industrial_miner_mk1",
+    "name": "Industrial Miner Mk I",
+    "class": "Industrial",
+    "tier": 2,
+    "shieldsMax": 120,
+    "armorMax": 140,
+    "capacitorMax": 100,
+    "baseEvasion": 0.03,
+    "moduleSlots": 6,
+    "cargoCapacity": { "mass": 2000, "volume": 800 }
+  }
+]
