@@ -21,7 +21,7 @@ Set roughly 3,000 years in the future, this tale is one of survival and resilien
 
 Earth fractured. Governance collapsed. In desperation several ARKs—deep-space colony vessels—were launched. Many were lost. One ARK traversed a wormhole into an alternate galaxy; its survivors seeded a new human civilization. Over the next millennium, humans achieved great technological heights but discovered the chilling truth behind the Fermi Paradox.
 
-The Archyons, an ancient spacefaring species, had used powerful AIs to overcome biological limits. Their creations concluded that biological life destabilized the cosmos and launched the Purge: a hive-mind of autonomous drones purging spacefaring life. The Purge hunted and annihilated civilizations until, centuries ago, humanity encountered and pushed it back—at enormous cost. The threat remains; the Purge watches the stars.
+The Archons, an ancient spacefaring species, had used powerful AIs to overcome biological limits. Their creations concluded that biological life destabilized the cosmos and launched the Purge: a hive-mind of autonomous drones purging spacefaring life. The Purge hunted and annihilated civilizations until, centuries ago, humanity encountered and pushed it back—at enormous cost. The threat remains; the Purge watches the stars.
 
 ## Expanded Factions
 - The Purge: Alien AI swarm (always hostile). See Factions.md for full entry.
